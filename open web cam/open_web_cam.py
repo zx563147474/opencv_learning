@@ -5,7 +5,7 @@ FPS = capture.get(5)
 print(FPS)
 # 定义编码方式并创建VideoWriter对象
 fourcc = cv2.VideoWriter_fourcc(*'avc1')
-outfile = cv2.VideoWriter('output.mp4', fourcc, FPS, (640, 480))
+outfile = cv2.VideoWriter('output1.mp4', fourcc, FPS, (640, 480))
 while(capture.isOpened()):
     ret, frame = capture.read()
     if ret:
