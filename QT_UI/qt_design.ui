@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="Camera">
+   <widget class="QLabel" name="labelCamera">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -30,7 +30,7 @@
      <string>Camera</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Capture">
+   <widget class="QLabel" name="labelCapture">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -46,7 +46,7 @@
      <string>Capture</string>
     </property>
    </widget>
-   <widget class="QLabel" name="Result">
+   <widget class="QLabel" name="labelResult">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -62,7 +62,7 @@
      <string>Result</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -79,35 +79,35 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QPushButton" name="OpenCamera">
+      <widget class="QPushButton" name="btnOpenCamera">
        <property name="text">
         <string>Open Camera</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="CaptureImage">
+      <widget class="QPushButton" name="btnCapture">
        <property name="text">
         <string>Capture Image</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="OpenImage">
+      <widget class="QPushButton" name="btnReadImage">
        <property name="text">
         <string>Open Image</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="GrayScale">
+      <widget class="QPushButton" name="btnGray">
        <property name="text">
         <string>Gray Scale</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="Otsu">
+      <widget class="QPushButton" name="btnThreshold">
        <property name="text">
         <string>Otsu</string>
        </property>
@@ -131,7 +131,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>OpenCamera</sender>
+   <sender>btnOpenCamera</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>btnOpenCamera_Clicked()</slot>
@@ -147,7 +147,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>CaptureImage</sender>
+   <sender>btnCapture</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>btnCapture_Clicked()</slot>
@@ -163,7 +163,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>OpenImage</sender>
+   <sender>btnReadImage</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>btnReadImage_Clicked()</slot>
@@ -179,7 +179,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>GrayScale</sender>
+   <sender>btnGray</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>btnGrayScale_Clicked()</slot>
@@ -195,7 +195,7 @@
    </hints>
   </connection>
   <connection>
-   <sender>Otsu</sender>
+   <sender>btnThreshold</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>btnThreshold_Clicked()</slot>

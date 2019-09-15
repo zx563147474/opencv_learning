@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import QFileDialog, QMainWindow
-from qt_design_form import Ui_MainWindow
+from mainForm import Ui_MainWindow
 class PyQtMainEntry(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
