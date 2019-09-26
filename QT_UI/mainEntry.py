@@ -10,46 +10,44 @@ class PyQtMainEntry(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.camera = cv2.VideoCapture(0)
-        self.is_camera_opened = False  # 摄像头有没有打开标记
-        # 定时器：30ms捕获一帧
+        self.is_camera_opened = False
+        # capture image every 30 ms
         self._timer = QtCore.QTimer(self)
         self._timer.timeout.connect(self._queryFrame)
-        self._timer.setInterval(40)
+        self._timer.setInterval(30)
     def btnOpenCamera_Clicked(self):
         '''
-        打开和关闭摄像头
+        turn on/off camera
         '''
         self.is_camera_opened = ~self.is_camera_opened
         if self.is_camera_opened:
-            self.btnOpenCamera.setText("关闭摄像头")
+            self.btnOpenCamera.setText("Turn off camera")
             self._timer.start()
         else:
-            self.btnOpenCamera.setText("打开摄像头")
+            self.btnOpenCamera.setText("Turn on camera")
             self._timer.stop()
     def btnCapture_Clicked(self):
         '''
-        捕获图片
+        capture image
         '''
-        # 摄像头未打开，不执行任何操作
+        # do nothing if camera is off
         if not self.is_camera_opened:
             return
         self.captured = self.frame
-        # 后面这几行代码几乎都一样，可以尝试封装成一个函数
+
         rows, cols, channels = self.captured.shape
         bytesPerLine = channels * cols
-        # Qt显示图片时，需要先转换成QImgage类型
+        # transform image to QImgage
         QImg = QImage(self.captured.data, cols, rows, bytesPerLine, QImage.Format_RGB888)
         self.labelCapture.setPixmap(QPixmap.fromImage(QImg).scaled(
             self.labelCapture.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
     def btnReadImage_Clicked(self):
-        '''
-        从本地读取图片
-        '''
-        # 打开文件选取对话框
-        filename,  _ = QFileDialog.getOpenFileName(self, '打开图片')
+
+        # open dialog
+        filename,  _ = QFileDialog.getOpenFileName(self, 'open image')
         if filename:
             self.captured = cv2.imread(str(filename))
-            # OpenCV图像以BGR通道存储，显示时需要从BGR转到RGB
+            # transform BGR to RGB
             self.captured = cv2.cvtColor(self.captured, cv2.COLOR_BGR2RGB)
             rows, cols, channels = self.captured.shape
             bytesPerLine = channels * cols
@@ -60,19 +58,19 @@ class PyQtMainEntry(QMainWindow, Ui_MainWindow):
         '''
         灰度化
         '''
-        # 如果没有捕获图片，则不执行操作
+        # no action if no captured image
         if not hasattr(self, "captured"):
             return
         self.cpatured = cv2.cvtColor(self.captured, cv2.COLOR_RGB2GRAY)
         rows, columns = self.cpatured.shape
         bytesPerLine = columns
-        # 灰度图是单通道，所以需要用Format_Indexed8
+        # Format_Indexed8 for grayscale
         QImg = QImage(self.cpatured.data, columns, rows, bytesPerLine, QImage.Format_Indexed8)
         self.labelResult.setPixmap(QPixmap.fromImage(QImg).scaled(
             self.labelResult.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
     def btnThreshold_Clicked(self):
         '''
-        Otsu自动阈值分割
+        Otsu
         '''
         if not hasattr(self, "captured"):
             return
@@ -80,14 +78,14 @@ class PyQtMainEntry(QMainWindow, Ui_MainWindow):
             self.cpatured, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         rows, columns = self.cpatured.shape
         bytesPerLine = columns
-        # 阈值分割图也是单通道，也需要用Format_Indexed8
+        # Format_Indexed8 for otsu
         QImg = QImage(self.cpatured.data, columns, rows, bytesPerLine, QImage.Format_Indexed8)
         self.labelResult.setPixmap(QPixmap.fromImage(QImg).scaled(
             self.labelResult.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
     @QtCore.pyqtSlot()
     def _queryFrame(self):
         '''
-        循环捕获图片
+        capture image in loop
         '''
         ret, self.frame = self.camera.read()
         img_rows, img_cols, channels = self.frame.shape
