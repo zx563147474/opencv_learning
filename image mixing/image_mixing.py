@@ -10,14 +10,18 @@ cv2.imshow('ROI', roi)
 cv2.waitKey(0)
 
 imgTogray = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
-ret, mask = cv2.threshold(imgTogray, 10, 255, cv2.THRESH_BINARY)
+cv2.imshow('imgTogray', imgTogray)
+cv2.waitKey(0)
+
+ret, mask = cv2.threshold(imgTogray, 10, 255, cv2.THRESH_BINARY_INV)
 cv2.imshow('mask', mask)
 cv2.waitKey(0)
+
 mask_inv = cv2.bitwise_not(mask)
 cv2.imshow('mixed', mask_inv)
 cv2.waitKey(0)
 
-img1_bg = cv2.bitwise_and(roi, roi, mask=mask_inv)
+img1_bg = cv2.bitwise_and(roi, roi, mask=mask)
 cv2.imshow('mixed1', img1_bg)
 cv2.waitKey(0)
 

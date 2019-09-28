@@ -59,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.cv2_image_blending">
+  <component name="RunManager" selected="Python.exercise">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,17 +82,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cv2_image_blending" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="contours" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../OpenCV-Python-Tutorial/09. 图像混合" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/contours" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../OpenCV-Python-Tutorial/09. 图像混合/cv2_image_blending.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/contours/contours.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,20 +101,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="image_geometric_transformations" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="edge_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Geometric Transformations of Images" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/edge detection" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Geometric Transformations of Images/image_geometric_transformations.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/edge detection/edge_detection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,17 +120,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="image_mixing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="enrode_dilute" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/image mixing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/enrode and dilate" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/image mixing/image_mixing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enrode and dilate/enrode_dilute.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -142,20 +139,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mainEntry" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="exercise" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/QT_UI" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/contours" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QT_UI/mainEntry.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/contours/exercise.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,20 +158,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="perspective_transformation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="smoothing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Geometric Transformations of Images" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/image smoothing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Geometric Transformations of Images/perspective_transformation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/image smoothing/smoothing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.cv2_image_blending" />
-        <item itemvalue="Python.image_mixing" />
-        <item itemvalue="Python.perspective_transformation" />
-        <item itemvalue="Python.image_geometric_transformations" />
-        <item itemvalue="Python.mainEntry" />
+        <item itemvalue="Python.exercise" />
+        <item itemvalue="Python.contours" />
+        <item itemvalue="Python.enrode_dilute" />
+        <item itemvalue="Python.edge_detection" />
+        <item itemvalue="Python.smoothing" />
       </list>
     </recent_temporary>
   </component>
@@ -228,6 +219,7 @@
       <workItem from="1568772314981" duration="1707000" />
       <workItem from="1569436707900" duration="7339000" />
       <workItem from="1569447556465" duration="4931000" />
+      <workItem from="1569616312982" duration="17919000" />
     </task>
     <servers />
   </component>
