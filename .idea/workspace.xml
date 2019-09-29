@@ -59,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.exercise">
+  <component name="RunManager" selected="Python.lane_detection">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,17 +82,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="contours" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="cv2_histogram" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/contours" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../OpenCV-Python-Tutorial/15. 直方图" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/contours/contours.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../OpenCV-Python-Tutorial/15. 直方图/cv2_histogram.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,17 +101,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="edge_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="historygram (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/edge detection" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../OpenCV-Python-Tutorial/15. 直方图" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/edge detection/edge_detection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../OpenCV-Python-Tutorial/15. 直方图/historygram.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,17 +120,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="enrode_dilute" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hough_transform" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/enrode and dilate" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hough transform" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enrode and dilate/enrode_dilute.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hough transform/hough_transform.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,17 +139,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="exercise" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lane_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/contours" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lane_detection" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/contours/exercise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lane_detection/lane_detection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,17 +158,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="smoothing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="template_matching" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="open_cv" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/image smoothing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/template matching" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/image smoothing/smoothing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/template matching/template_matching.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.exercise" />
-        <item itemvalue="Python.contours" />
-        <item itemvalue="Python.enrode_dilute" />
-        <item itemvalue="Python.edge_detection" />
-        <item itemvalue="Python.smoothing" />
+        <item itemvalue="Python.lane_detection" />
+        <item itemvalue="Python.hough_transform" />
+        <item itemvalue="Python.template_matching" />
+        <item itemvalue="Python.cv2_histogram" />
+        <item itemvalue="Python.historygram (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -220,6 +220,8 @@
       <workItem from="1569436707900" duration="7339000" />
       <workItem from="1569447556465" duration="4931000" />
       <workItem from="1569616312982" duration="17919000" />
+      <workItem from="1569649706206" duration="375000" />
+      <workItem from="1569718647296" duration="25122000" />
     </task>
     <servers />
   </component>
