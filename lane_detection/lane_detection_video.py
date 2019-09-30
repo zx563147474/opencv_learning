@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-
+from moviepy.editor import VideoFileClip
 #guassian blur kernal size
 guablur_size = 5
 
@@ -11,7 +11,7 @@ cHigh = 150
 #Hough transform
 r_distance = 0.8
 thetaAcc = np.pi / 180
-thres = 90
+thres = 20
 minLLen = 60
 maxLGap = 50
 #%%
@@ -28,16 +28,13 @@ def image_processing(img):
 
     #Hough
     drawing, lines = Hough_Trans(ROI_mask, r_distance, thetaAcc, thres, minLLen, maxLGap)
-    print(lines)
-    cv2.imshow('drawing',drawing)
-    cv2.waitKey(0)
+    #print(lines)
     #draw lane lines
-
-
     draw_lane(drawing, lines)
-    cv2.imshow('drawing1',drawing)
-    cv2.waitKey(0)
     final = cv2.addWeighted(img, 0.9, drawing, 0.2, 0)
+    cv2.imshow('frame', final)
+    if (cv2.waitKey(1) & 0xFF) == ord('q'):
+        print('stop')
     return final
 
 def ROI(img, corners):
@@ -52,7 +49,9 @@ def ROI(img, corners):
 def Hough_Trans(img, r_distance, theta, thres, minLLen, maxLGap):
     drawing = np.zeros((img.shape[0], img.shape[1],3), dtype= 'uint8')
     lines = cv2.HoughLinesP(img, r_distance, theta, thres, minLineLength = minLLen, maxLineGap = maxLGap)
-    #draw_lines(drawing, lines)
+    draw_lines(drawing, lines)
+    #cv2.imshow('drawing', drawing)
+    #cv2.waitKey(0)
     return drawing, lines
 
 def draw_lines(img, lines, color = (0, 255, 0), thickness = 2):
@@ -84,20 +83,26 @@ def draw_lane(img, lines, color = (0, 0, 255), thickness = 5):
     left_fit_point = least_square(left_points, 320, img.shape[0]) #para 2 is determined by ROI mask
     right_fit_point = least_square(right_points, 320, img.shape[0])
     corners = np.array([[left_fit_point[1], left_fit_point[0], right_fit_point[0], right_fit_point[1]]])
-    print(corners)
+    #print(corners)
     cv2.fillPoly(img, corners, (255, 0, 0))
     # or just the line shape of lane
     # cv2.line(img, left_results[0], left_results[1], (0, 255, 0), thickness)
     # cv2.line(img, right_results[0], right_results[1], (0, 255, 0), thickness)
+    #cv2.imshow('filled', img)
+    #cv2.waitKey(0)
+
 
 def least_square(points, ymin, ymax):
     x = [point[0] for point in points]
     y = [point[1] for point in points]
+
     fit = np.polyfit(y, x, 1)
     fit_fn = np.poly1d(fit)
+
     xmin = int(fit_fn(ymin))
     xmax = int(fit_fn(ymax))
     return [(xmin, ymin), (xmax, ymax)]
+
 
 def clean_wrong_line(lines, threshold):
     #
@@ -112,10 +117,39 @@ def clean_wrong_line(lines, threshold):
         else:
             break
 
+
 if __name__ == '__main__':
-    img = cv2.imread('lane.jpg')
-    final = image_processing(img)
-    cv2.imshow('compare',final)
-    cv2.waitKey(0)
+
+    #videoCap = cv2.VideoCapture('cv2_white_lane.mp4')
+    #fps = videoCap.get(cv2.CAP_PROP_FPS)
+    #fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+    #width = int(videoCap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    #height = int(videoCap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    #out = cv2.VideoWriter('processed_video.avi', fourcc, fps, (width, height))
+    #i = 1
+    #while (videoCap.isOpened()):
+     #   ret, frame = videoCap.read()
+     #   if ret:
+    #      _, _, _, _, final = image_processing(frame)
+     #       i = i +1
+     #       out.write(final)
+        #cv2.imshow('current', final)
+        #cv2.waitKey(1)
+        #if (cv2.waitKey(1) & 0xFF) == ord('q'):  # Hit `q` to exit
+        #    break
+    #out.release()
+    #videoCap.release()
+    #cv2.destroyAllWindows()
+
+    #output = 'processed_video.mp4'
+    #clip = VideoFileClip('cv2_yellow_lane.mp4')
+    #outputVideo = clip.fl_image(image_processing)
+    #outputVideo.write_videofile(output, audio=False)
+
+    output = 'processed_video.mp4'
+    clip = VideoFileClip("cv2_yellow_lane.mp4")
+    out_clip = clip.fl_image(image_processing)
+    out_clip.write_videofile(output, audio=False)
+    cv2.destroyAllWindows()
 
 
